@@ -27,16 +27,7 @@ public class Book extends Media {
     public void addAuthor(String author) {
         authors.add(author);
     }
-//    public static void addAuthor (String authorName) {
-//        for (int i = 0; i < Book.getAuthors().size(); i++) {
-//            if(authorName.equals(Book.getAuthors().get(i))) {
-//                System.out.println("Author existed.");
-//            } else {
-//                Book.getAuthors().add(authorName);
-//                System.out.println("Author's name is added.");
-//            }
-//        }
-//    }
+
     public void removeAuthor (String authorName) {
         Iterator<String> itr = authors.iterator();
         while (itr.hasNext()) {

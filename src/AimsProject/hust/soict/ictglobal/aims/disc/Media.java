@@ -44,4 +44,9 @@ public class Media {
     public void setCost(float cost) {
         this.cost = cost;
     }
+    public String toString() {
+        return ("Id: " + this.getId() + " Title: " + this.getTitle() +
+                " Category: " + this.getCategory() +
+                " Price: " + this.getCost());
+    }
 }

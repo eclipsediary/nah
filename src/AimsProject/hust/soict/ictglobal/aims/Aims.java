@@ -11,7 +11,6 @@ import java.util.Iterator;
 import java.util.Scanner;
 
 public class Aims {
-
     public static void showMenu() {
 
         Scanner menu = new Scanner(System.in);
@@ -34,39 +33,37 @@ public class Aims {
             switch (choice) {
                 case 0: break;
                 case 1:
+                    anOrder.clear();
                     System.out.println("An order is created");
                     break;
                 case 2:
                     System.out.println("Enter an id");
                     int id = disc.nextInt();
                     System.out.println("Enter a title");
-                    String title = disc.nextLine();
+                    String title = disc.next();
                     System.out.println("Enter a category");
-                    String category = disc.nextLine();
+                    String category = disc.next();
                     System.out.println("Enter price");
                     float cost = disc.nextFloat();
                     Media aDisc = new Media(id, title,category,cost);
-
-                    anOrder.add(aDisc);
-
                     newOrder.addMedia(aDisc);
-                    System.out.println(Arrays.deepToString(anOrder.toArray()));
                     System.out.println("A disc has been added");
                     break;
                 case 3:
                     System.out.println("Enter an id");
                     int aID = disc.nextInt();
-                    anOrder.remove(aID);
+                    newOrder.removeMedia(aID);
                     break;
                 case 4:
-                    Iterator<Media> it = anOrder.iterator();
-                    while(it.hasNext()){
-                        System.out.println(it.next());
+                    for(Media a : anOrder) {
+                        System.out.println(a);
                     }
+                    System.out.print("Total cost: ");
+                    System.out.println(newOrder.totalCost());
                     break;
                 default: break;
             }
-        } while (choice != 4);
+        } while (choice > 0 && choice < 5);
     }
     public static void main (String[] args) {
         showMenu();

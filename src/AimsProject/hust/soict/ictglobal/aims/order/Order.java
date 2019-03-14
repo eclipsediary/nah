@@ -8,18 +8,10 @@ import java.util.List;
 
 public class Order {
     private static int totalCost;
-//    private Time dateOrder;
-//    public Time getDateOrder() {
-//        return dateOrder;
-//    }
-//    public void setDateOrder(Time dateOrder) {
-//        this.dateOrder = dateOrder;
-//    }
-
     private ArrayList<Media> itemsOrdered = new ArrayList<Media>();
+
     public Order (ArrayList<Media> disc){
         this.itemsOrdered = disc;
-        totalCost = 0;
     }
     public ArrayList<Media> getItemsOrdered() {
         return itemsOrdered;
@@ -31,20 +23,7 @@ public class Order {
      public void addMedia(Media aDisc) {
         itemsOrdered.add(aDisc);
      }
-//    public void removeMedia(Media aDisc) {
-//        itemsOrdered.remove(aDisc);
-//    }
-//    public static void addMedia (Media aDisc) {
-//        ArrayList<Media> list =
-//        for (int i = 0; i < itemOrdered().size(); i++) {
-//            if(aDisc.getTitle().equals(itemOrdered.get(i).getTitle())) {
-//                System.out.println("Disc existed.");
-//            } else {
-//                itemOrdered.add(aDisc);
-//                System.out.println("Disc is added.");
-//            }
-//        }
-//    }
+
     public void removeMedia (int id) {
         Iterator<Media> itr = itemsOrdered.iterator();
         while (itr.hasNext()) {
