@@ -1,3 +1,5 @@
+package AimsProject.hust.soict.ictglobal.datetest;
+
 import java.util.Arrays;
 public class DateUtils {
     public static int compareDate(MyDate date1, MyDate date2) {

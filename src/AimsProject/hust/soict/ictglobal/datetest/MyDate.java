@@ -1,7 +1,7 @@
+package AimsProject.hust.soict.ictglobal.datetest;
+
 import java.util.Scanner;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Arrays;
+
 public class MyDate {
     private int day;
     private int month;
